@@ -2,17 +2,17 @@
 
 # Mais pourquoi ?!
 
-Ce script a été "codé" pour plusieurs raisons :
-* aider à suivre les mises à jour des logiciels MAO sur Linux afin de les 
-  annoncer sur https://linuxmao.org et de donner à manger à 
-  http://librazik.tuxfamily.org :)
-* me permettre de découvrir le langage python. Etant un un piètre codeur, vos
-  contributions ou suggestions sont les bienvenues :)
+Ce script a été commis pour plusieurs raisons :
+* Aider à suivre les mises à jour des logiciels MAO sur Linux afin de les 
+  annoncer sur https://linuxmao.org et, accessoirement, de donner à manger à 
+  http://librazik.tuxfamily.org
+* Me permettre de découvrir le langage python. Etant un un piètre codeur, vos
+  contributions ou suggestions sont les bienvenues !
 
 # Installation
-* cloner le repository
+* Cloner le repository
 * Installer les dépendances python (python3-requests et python3-urllib3)	
-* configurer linuxmao-logiciels.ini avec les identifiants github (le nombre de
+* Configurer linuxmao-logiciels.ini avec les identifiants github (le nombre de
   requêtes vers l'API est très limité sans être identifié)
 
 # Utilisation
@@ -56,3 +56,11 @@ Chercher si des logiciels ont été mis à jour sur les repos pris en charge  :
 ```
 
 # TODO
+* Gérer les exceptions en particulier sur les requêtes http (l'API 
+  sourceforge n'est pas toujours super en forme)
+* Factoriser certaines fonctions
+* Permettre l'ajout de logiciels ou la modification d'une entrée dans la base 
+  locale. Actuellement il faut utiliser, par exemple, sqlitebrowser
+* Jouer avec le threading afin d'accélérer les choses
+* Ajouter d'autres repos comme gitlab ou bitbucket, voir même des sites 
+  spécifiques
