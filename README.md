@@ -20,12 +20,13 @@ Ce script a été commis pour plusieurs raisons :
 Montrer les options disponibles :
 ```
 ./linuxmao-logiciels.py 
-usage: linuxmao-logiciels.py [-h] [--logiciel LOGICIEL] [--repo REPO]
+usage: linuxmao-logiciels.py [-h] [--logiciel LOGICIEL] [--stats]
+                             [--repo REPO]
 
 optional arguments:
   -h, --help           show this help message and exit
-  --logiciel LOGICIEL  chercher si une logiciel est présent dans la base de
-                       données locale
+  --logiciel LOGICIEL  chercher si un logiciel est présent dans la DB locale
+  --stats              afficher des statistiques sur la DB locale
   --repo REPO          chercher les maj dans les repos en ligne (repo =
                        sourceforge, github, ALL)
 ```
@@ -35,7 +36,6 @@ Chercher si un logiciel est présent dans la DB locale :
 ./linuxmao-logiciels.py --logiciel aud
 audiveris - 5.1.0 - https://github.com/Audiveris/audiveris/
 Audacity - Audacity-2.3.1 - https://github.com/audacity/audacity/
-
 ```
 
 Chercher si des logiciels ont été mis à jour sur sourceforge :
@@ -52,7 +52,6 @@ qtractor - /qtractor/0.9.5/qtractor-0.9.5.tar.gz - https://sourceforge.net/proje
 Chercher si des logiciels ont été mis à jour sur les repos pris en charge  :
 ```
 ./linuxmao-logiciels.py --repo ALL
-
 ```
 
 # TODO
