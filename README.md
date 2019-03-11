@@ -46,7 +46,6 @@ wavesurfer - /wavesurfer/1.8.8p5/wavesurfer-1.8.8p5-linux-x86_64.tgz - https://s
 qtractor - /qtractor/0.9.5/qtractor-0.9.5.tar.gz - https://sourceforge.net/projects/qtractor/
 ---
 [...]
-
 ```
 
 Chercher si des logiciels ont été mis à jour sur les repos pris en charge  :
@@ -61,5 +60,5 @@ Chercher si des logiciels ont été mis à jour sur les repos pris en charge  :
 * Permettre l'ajout de logiciels ou la modification d'une entrée dans la base 
   locale. Actuellement il faut utiliser, par exemple, sqlitebrowser
 * Jouer avec le threading afin d'accélérer les choses
-* Ajouter d'autres repos comme gitlab ou bitbucket, voir même des sites 
+* Ajouter d'autres repos comme gitlab, bitbucket ou savannah, voir même des sites 
   spécifiques
