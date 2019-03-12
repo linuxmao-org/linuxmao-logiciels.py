@@ -134,3 +134,4 @@ elif args.repo == 'gitlab':
 elif args.repo == 'ALL':
 	get_github_latest()
 	get_sourceforge_latest()
+	get_gitlab_latest()
