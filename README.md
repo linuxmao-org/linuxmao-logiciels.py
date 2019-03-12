@@ -20,12 +20,12 @@ Ce script a été commis pour plusieurs raisons :
 Montrer les options disponibles :
 ```
 ./linuxmao-logiciels.py 
-usage: linuxmao-logiciels.py [-h] [--logiciel LOGICIEL] [--stats]
+usage: linuxmao-logiciels.py [-h] [--cherche CHERCHE] [--stats]
                              [--repo REPO]
 
 optional arguments:
   -h, --help           show this help message and exit
-  --logiciel LOGICIEL  chercher si un logiciel est présent dans la DB locale
+  --cherche CHERCHE    chercher si un logiciel est présent dans la DB locale
   --stats              afficher des statistiques sur la DB locale
   --repo REPO          chercher les maj dans les repos en ligne (repo =
                        sourceforge, github, ALL)

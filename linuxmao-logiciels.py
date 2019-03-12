@@ -15,7 +15,7 @@ github_pass = config['github']['github_pass']
 
 # CLI arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("--logiciel", help="chercher si un logiciel est présent dans la DB locale")
+parser.add_argument("--cherche", help="chercher si un logiciel est présent dans la DB locale")
 parser.add_argument("--stats", help="afficher des statistiques sur la DB locale", action="store_true")
 parser.add_argument("--repo", help="chercher les maj dans les repos en ligne (repo = sourceforge, github, ALL)")
 
@@ -94,8 +94,8 @@ def get_stats_from_db():
 	print ("Total :", total)
 	
 
-if args.logiciel:
-	get_software_in_db(str = args.logiciel)
+if args.cherche:
+	get_software_in_db(str = args.cherche)
 elif args.stats:
 	get_stats_from_db()
 elif args.repo == 'github':
