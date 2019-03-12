@@ -28,7 +28,7 @@ optional arguments:
   --cherche CHERCHE    chercher si un logiciel est présent dans la DB locale
   --stats              afficher des statistiques sur la DB locale
   --repo REPO          chercher les maj dans les repos en ligne (repo =
-                       sourceforge, github, ALL)
+                       sourceforge, github, gitlab, ALL)
 ```
 
 Chercher si un logiciel est présent dans la DB locale :
@@ -60,5 +60,5 @@ Chercher si des logiciels ont été mis à jour sur les repos pris en charge  :
 * Permettre l'ajout de logiciels ou la modification d'une entrée dans la base 
   locale. Actuellement il faut utiliser, par exemple, sqlitebrowser
 * Jouer avec le threading afin d'accélérer les choses
-* Ajouter d'autres repos comme gitlab, bitbucket ou savannah, voir même des sites 
+* Ajouter d'autres repos comme bitbucket ou savannah, voir même des sites 
   spécifiques
