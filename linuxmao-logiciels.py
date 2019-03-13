@@ -68,7 +68,7 @@ def get_sourceforge_latest():
 		# get the latest release
 		latest_release = r.json()['platform_releases']['linux']['filename']
 		if current_release !=  latest_release: 
-			print ("New release available : " +latest_release)
+			print ("New release available :" +latest_release)
 		print ("---")
 
 # get latest release from gitlab
@@ -117,7 +117,10 @@ def get_stats_from_db():
 	c.execute("SELECT COUNT(*) FROM software WHERE orig='github'")
 	count_github = c.fetchone()
 	print ("Entrées Github :", count_github[0])
-	total = count_sourceforge[0] + count_github[0]
+	c.execute("SELECT COUNT(*) FROM software WHERE orig='gitlab'")
+	count_gitlab = c.fetchone()
+	print ("Entrées gitlab :", count_gitlab[0])
+	total = count_sourceforge[0] + count_github[0] + count_gitlab[0]
 	print ("Total :", total)
 	
 

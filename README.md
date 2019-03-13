@@ -1,13 +1,19 @@
 # linuxmao-logiciels.py
 
 # Mais pourquoi ?!
-
 Ce script a été commis pour plusieurs raisons :
 * Aider à suivre les mises à jour des logiciels MAO sur Linux afin de les 
   annoncer sur https://linuxmao.org et, accessoirement, de donner à manger à 
   http://librazik.tuxfamily.org
 * Me permettre de découvrir le langage python. Etant un un piètre codeur, vos
   contributions ou suggestions sont les bienvenues !
+
+# Principe
+* Les versions en cours des logiciels sont stockées dans une base de données
+  sqlite
+* Les API des différents repos sont interrogées afin de scruter les nouvelles
+  mises à jour
+* Le script indique qu'une nouvelle version est disponible
 
 # Installation
 * Cloner le repository
@@ -62,3 +68,6 @@ Chercher si des logiciels ont été mis à jour sur les repos pris en charge  :
 * Jouer avec le threading afin d'accélérer les choses
 * Ajouter d'autres repos comme bitbucket ou savannah, voir même des sites 
   spécifiques
+* Poster sur le formulaire de linuxmao.org 
+* Mettre à jour des variables version et date sur linuxmao.org
+  à jour les versions 
