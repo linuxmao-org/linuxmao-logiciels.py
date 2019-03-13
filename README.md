@@ -37,7 +37,7 @@ optional arguments:
                        sourceforge, github, gitlab, ALL)
 ```
 
-Chercher si un logiciel est présent dans la DB locale :
+Chercher si un logiciel est présent dans la base de données locale :
 ```
 ./linuxmao-logiciels.py --logiciel aud
 audiveris - 5.1.0 - https://github.com/Audiveris/audiveris/
