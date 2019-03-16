@@ -39,7 +39,7 @@ optional arguments:
 
 Chercher si un logiciel est présent dans la base de données locale :
 ```
-./linuxmao-logiciels.py --logiciel aud
+./linuxmao-logiciels.py --cherche aud
 audiveris - 5.1.0 - https://github.com/Audiveris/audiveris/
 Audacity - Audacity-2.3.1 - https://github.com/audacity/audacity/
 ```
