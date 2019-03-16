@@ -49,12 +49,16 @@ def get_github_latest():
 		latest_url='https://api.github.com/repos'+o.path+'releases/latest'
 		#print ('Latest release URL: '+latest_url)
 		r = requests.get(latest_url, auth=(github_user, github_pass))
-		# get the latest release
-		latest_release = r.json()['tag_name']
-		if current_release !=  latest_release: 
-			message = "New release available : " +latest_release+ ' / URL: '+url+'releases/'
-			print_red(message)
-		print ("---")
+		if r.status_code not in (200, 304):
+			    raise Exception("Problème de connexion à github. %s %s" % (r.status_code, r))
+		else:
+			# get the latest release
+			latest_release = r.json()['tag_name']
+			if current_release !=  latest_release: 
+				message = "New release available : " +latest_release+ ' / URL: '+url+'releases/'
+				print_red(message)
+			print ("---")
+
 
 # get latest release from sourceforge
 def get_sourceforge_latest():
