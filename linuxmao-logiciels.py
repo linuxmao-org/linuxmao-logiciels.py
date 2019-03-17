@@ -41,7 +41,12 @@ def get_github_latest():
 	for row in c.fetchall():
 		name = row[0]
 		current_release = row[1]
-		url = row[2]
+		# be sure that the URL is ending with a trailing slash in the DB
+		if not row[2].endswith('/'):
+			url = row[2]+'/'
+			print_red ("Merci d'ajouter un / à la fin de l'url dans la base pour "+name)
+		else:
+			url = row[2]
 		print (''+name+' - '+current_release+' - '+url+'')
 		# parse the URL and extract the path
 		o = urlparse(url)
@@ -89,7 +94,12 @@ def get_gitlab_latest():
 	for row in c.fetchall():
 		name = row[0]
 		current_release = row[1]
-		url = row[2]
+		# be sure that the URL is ending with a trailing slash in the DB
+		if not row[2].endswith('/'):
+			url = row[2]+'/'
+			print_red ("Merci d'ajouter un / à la fin de l'url dans la base pour "+name)
+		else:
+			url = row[2]
 		print (''+name+' - '+current_release+' - '+url+'')
 		# parse the URL and extract the path
 		o = urlparse(url)
