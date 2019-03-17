@@ -26,8 +26,9 @@ if len(sys.argv)==1:
 args = parser.parse_args()
 
 
-# print a string in red
-def print_red(skk): print("\033[91m {}\033[00m" .format(skk)) 
+# print a string in red or green
+def print_red(texte): print("\033[91m {}\033[00m" .format(texte)) 
+def print_green(texte): print("\033[92m {}\033[00m" .format(texte))
 
 # Connect to the sqlite DB
 conn = sqlite3.connect('software.db')
@@ -61,7 +62,7 @@ def get_github_latest():
 			latest_release = r.json()['tag_name']
 			if current_release !=  latest_release: 
 				message = "Nouvelle version disponible : " +latest_release+ ' / URL: '+url+'releases/'
-				print_red(message)
+				print_green(message)
 			print ("---")
 
 
@@ -83,7 +84,7 @@ def get_sourceforge_latest():
 		latest_release = r.json()['platform_releases']['linux']['filename']
 		if current_release !=  latest_release: 
 			message = "Nouvelle version disponible :" +latest_release
-			print_red(message)
+			print_green(message)
 		print ("---")
 
 # get latest release from gitlab
@@ -116,7 +117,7 @@ def get_gitlab_latest():
 		latest_release = r.json()[0]['tag_name']
 		if current_release !=  latest_release: 
 			message = "Nouvelle version disponible : " +latest_release
-			print_red(message)
+			print_green(message)
 		print ("---")
 	
 # Look if a software is in the DB
