@@ -55,7 +55,7 @@ def get_github_latest():
 			# get the latest release
 			latest_release = r.json()['tag_name']
 			if current_release !=  latest_release: 
-				message = "New release available : " +latest_release+ ' / URL: '+url+'releases/'
+				message = "Nouvelle version disponible : " +latest_release+ ' / URL: '+url+'releases/'
 				print_red(message)
 			print ("---")
 
@@ -77,7 +77,7 @@ def get_sourceforge_latest():
 		# get the latest release
 		latest_release = r.json()['platform_releases']['linux']['filename']
 		if current_release !=  latest_release: 
-			message = "New release available :" +latest_release
+			message = "Nouvelle version disponible :" +latest_release
 			print_red(message)
 		print ("---")
 
@@ -105,7 +105,7 @@ def get_gitlab_latest():
 		r = requests.get(project_release)
 		latest_release = r.json()[0]['tag_name']
 		if current_release !=  latest_release: 
-			message = "New release available : " +latest_release
+			message = "Nouvelle version disponible : " +latest_release
 			print_red(message)
 		print ("---")
 	
