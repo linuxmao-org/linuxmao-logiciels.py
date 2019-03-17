@@ -106,13 +106,13 @@ def get_gitlab_latest():
 		o = urlparse(url)
 		# get the project ID
 		id_url="http://gitlab.com/api/v4/projects/"+(o.path[1:-1]).replace('/', '%2F')
-		print (id_url)
+		#print (id_url)
 		r = requests.get(id_url)
 		r.json()
 		project_id = r.json()['id']
 		# generate and query the project release url
 		project_release = 'https://gitlab.com/api/v4/projects/'+str(project_id)+'/releases'
-		print (project_release)
+		#print (project_release)
 		r = requests.get(project_release)
 		latest_release = r.json()[-1]['tag_name']
 		if current_release !=  latest_release: 
