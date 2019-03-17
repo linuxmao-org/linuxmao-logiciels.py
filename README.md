@@ -18,8 +18,11 @@ Ce script a été commis pour plusieurs raisons :
 # Installation
 * Cloner le repository
 * Installer les dépendances python (python3-requests et python3-urllib3)	
-* Configurer linuxmao-logiciels.ini avec les identifiants github (le nombre de
-  requêtes vers l'API est très limité sans être identifié)
+* Configurer linuxmao-logiciels.ini avec les identifiants GitHub (le nombre de
+  requêtes vers l'API est très limité sans être identifié). Si vous utilisez
+  l'authentification à deux facteurs (2FA) il faut [générer un token](https://github.com/settings/tokens/new)
+  en sélectionnant le "scope" `repo` et l'utiliser en lieu et place de votre
+  mot de passe GitHub.
 
 # Utilisation
 
