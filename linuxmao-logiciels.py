@@ -114,7 +114,7 @@ def get_gitlab_latest():
 		project_release = 'https://gitlab.com/api/v4/projects/'+str(project_id)+'/releases'
 		#print (project_release)
 		r = requests.get(project_release)
-		latest_release = r.json()[-1]['tag_name']
+		latest_release = r.json()[0]['tag_name']
 		if current_release !=  latest_release: 
 			message = "Nouvelle version disponible : " +latest_release
 			print_green(message)
